@@ -1,0 +1,78 @@
+body {
+  background-color: #f2f2f2; }
+
+html {
+  font-size: 1rem; }
+
+header {
+  position: relative; }
+  header .menuBtn {
+    position: fixed;
+    left: 2.8125rem;
+    top: 2.1875rem; }
+  header .header {
+    height: 21.875rem; }
+    header .header .t {
+      height: 12.5rem; }
+    header .header .title {
+      display: block;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+    header .header .subtitle {
+      display: block;
+      margin-top: 0.9375rem;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+
+main {
+  position: relative;
+  padding: 0 1.25rem;
+  margin-bottom: 3.125rem; }
+  main .settingsBtn {
+    position: absolute;
+    top: 7.625rem;
+    right: calc((100% - 62.5rem) / 4); }
+  main .card {
+    position: relative;
+    margin: 0 auto;
+    max-width: 62.5rem;
+    min-height: 37.5rem;
+    margin-top: -9.375rem;
+    background-color: #fff; }
+    main .card .operating {
+      width: 100%;
+      height: 4.375rem; }
+      main .card .operating > button {
+        margin-left: 1.5rem; }
+      main .card .operating .search {
+        position: absolute;
+        width: 18.75rem;
+        right: 1.5rem; }
+    main .card .breadcrumb {
+      height: 3.125rem;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-left: 1.5rem; }
+      main .card .breadcrumb .directory {
+        cursor: pointer; }
+      main .card .breadcrumb .rootDir {
+        cursor: pointer; }
+    main .card .files .mdui-table-fluid {
+      border: none; }
+    main .card .files td > i {
+      margin-right: 10px; }
+    main .card .files tbody tr {
+      cursor: pointer; }
+
+@media (max-width: 600px) {
+  header .header, header .t {
+    height: 9.375rem !important; }
+  header .menuBtn {
+    left: 1.25rem;
+    top: 0.9375rem; }
+  main {
+    padding: 0;
+    margin: 0; }
+    main .card {
+      margin-top: 0; }
+    main .img-list {
+      height: auto !important; } }

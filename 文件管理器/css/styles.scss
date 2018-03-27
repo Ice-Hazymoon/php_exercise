@@ -1,0 +1,108 @@
+@import '../node_modules/sass-rem/_rem.scss';
+
+body{
+    background-color: #f2f2f2;
+}
+
+html{
+    font-size: 1rem;
+}
+header{
+    position: relative;
+    .menuBtn{
+        position: fixed;
+        left: rem(45px);
+        top: rem(35px);
+    }
+    .header{
+        height: rem(350px);
+        .t{
+            height: rem(200px);
+        }
+        .title{
+            display: block;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        }
+        .subtitle{
+            display: block;
+            margin-top: rem(15px);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        }
+    }
+}
+main{
+    position: relative;
+    padding: rem(0 20px);
+    margin-bottom: rem(50px);
+    .settingsBtn{
+        position: absolute;
+        top: rem(122px);
+        right: calc((100% - #{rem(1000px)}) / 4);
+    }
+    .card{
+        position: relative;
+        margin: 0 auto;
+        max-width: rem(1000px);
+        min-height: rem(600px);
+        margin-top: rem(-150px);
+        background-color: #fff;
+        .operating{
+            width: 100%;
+            height: rem(70px);
+            &>button{
+                margin-left: rem(24px);
+            }
+            .search{
+                position: absolute;
+                width: rem(300px);
+                right: rem(24px);
+            }
+        }
+        .breadcrumb{
+            height: rem(50px);
+            position: relative;
+            overflow-x: auto;
+            white-space:nowrap;
+            padding-left: rem(24px);
+            .directory{
+                cursor: pointer;
+            }
+            .rootDir{
+                cursor: pointer;
+            }
+        }
+        .files{
+            .mdui-table-fluid{
+                border: none;
+            }
+            td>i{
+                margin-right: 10px;
+            }
+            tbody tr{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width:600px){
+    header{
+        .header, .t{
+            height: rem(150px) !important;
+        }
+        .menuBtn{
+            left: rem(20px);
+            top: rem(15px);
+        }
+    }
+    main{
+        padding: 0;
+        margin: 0;
+        .card{
+            margin-top: 0;
+        }
+        .img-list{
+            height: auto !important;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import './rem.scss';
+body{
+	background-color: #f2f2f2;
+}
+html{
+    font-size: 1rem;
+}
+header{
+    position: relative;
+    .menuBtn{
+        position: fixed;
+        left: rem(45px);
+        top: rem(35px);
+    }
+    .header{
+        height: rem(350px);
+        .t{
+            height: rem(200px);
+        }
+        .title{
+            display: block;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        }
+        .subtitle{
+            display: block;
+            margin-top: rem(15px);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        }
+    }
+}
+main{
+	margin-bottom: rem(50px);
+    position: relative;
+    padding: rem(0 20px);
+    .settingsBtn{
+        position: absolute;
+        top: rem(122px);
+        right: calc((100% - #{rem(1000px)}) / 4);
+    }
+    .card{
+        margin: 0 auto;
+        max-width: rem(1000px);
+        min-height: rem(600px);
+        margin-top: rem(-150px);
+        background-color: #fff;
+        .ccc{
+            margin: 0 auto;
+            min-height: 400px;
+            max-width: 500px;
+            .mdui-center{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:600px){
+    header{
+        .header, .t{
+            height: rem(150px) !important;
+        }
+        .menuBtn{
+            left: rem(20px);
+            top: rem(15px);
+        }
+    }
+    main{
+        padding: 0;
+        margin: 0;
+        .card{
+            margin-top: 0;
+        }
+        .img-list{
+            height: auto !important;
+        }
+    }
+}
